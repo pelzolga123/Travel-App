@@ -5,6 +5,8 @@ const dealReducer = (state = '', action) => {
         ...state,
         action.payload,
       ];
+    case 'FETCH_DEALS':
+      return action.payload;
     default:
       return state;
   }

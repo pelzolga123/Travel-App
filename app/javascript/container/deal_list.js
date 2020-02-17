@@ -1,31 +1,53 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import axios from 'axios';
 import Deal from '../components/deal';
+import { fetchDeals } from '../actions/index';
 
 class DealList extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      deals: [],
+      isLoaded: false,
+    };
   }
+
+  componentDidMount() {
+    fetch('/deals')
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(json);
+        this.setState({
+          isLoaded: true,
+          deals: json,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
   render() {
-    const { deal } = this.props;
+    const { deals, isLoaded } = this.state;
     return (
-      <div>{deal.map((item) => (<Deal key={item.id} deal={item} />))}</div>
+    //<div>{deals.map((item) => (<p key={item.id}>{item.deal_name}</p>))}</div>
+    <div>{deals.map((item) => (<Deal key={item.id} deals={item} />))}</div>
     );
   }
 }
 
 const mapStateToProps = (state) => ({
-  deal: state.deal,
+  deals: state.DealList,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  fetchDeals: (deals) => dispatch(fetchDeals(deals)),
 });
 
 DealList.propTypes = {
-  deal: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number,
-      deal_name: PropTypes.string,
-    }).isRequired,
-  ).isRequired,
+  fetchDeals: PropTypes.func.isRequired,
 };
 
-export default connect(mapStateToProps)(DealList);
+export default connect(null, mapDispatchToProps)(DealList);

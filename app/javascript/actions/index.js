@@ -1,6 +1,11 @@
-const bookDeal = deal => ({
-    type: 'BOOK_DEAL',
-    payload: deal,
+const bookDeal = (deal) => ({
+  type: 'BOOK_DEAL',
+  payload: deal,
 });
 
-export { bookDeal };
+const fetchDeals = (deals) => ({
+  type: 'FETCH_DEALS',
+  payload: deals,
+});
+
+export { bookDeal, fetchDeals };

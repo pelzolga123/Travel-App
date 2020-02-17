@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Deal = ({ deal }) => (
+const Deal = ({ deals }) => (
   <div>
-    <p>{deal.id}</p>
-    <h1>{deal.deal_name}</h1>
+    <p>{deals.id}</p>
+    <h1>{deals.deal_name}</h1>
   </div>
 );
 
 Deal.propTypes = {
-  deal: PropTypes.shape({
+  deals: PropTypes.shape({
     id: PropTypes.number,
     deal_name: PropTypes.string,
   }).isRequired,
