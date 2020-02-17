@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import axios from 'axios';
 import Deal from '../components/deal';
 import { fetchDeals } from '../actions/index';
 
@@ -32,7 +31,6 @@ class DealList extends React.Component {
   render() {
     const { deals, isLoaded } = this.state;
     return (
-    //<div>{deals.map((item) => (<p key={item.id}>{item.deal_name}</p>))}</div>
     <div>{deals.map((item) => (<Deal key={item.id} deals={item} />))}</div>
     );
   }
