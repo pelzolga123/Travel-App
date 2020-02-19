@@ -31,7 +31,7 @@ $ git clone https://github.com/pelzolga123/Bookstore.git
 > change directory into the directory
 
 ```sh
-$ cd TravelApp
+$ cd Travel-App
 ```
 
 > Install dependencies
@@ -63,7 +63,7 @@ $ rails s
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/pelzolga123/Bookstore/issues).
 
-1. Fork it (https://github.com/pelzolga123/Bookstore/fork)
+1. Fork it (https://github.com/pelzolga123/Travel-App/fork)
 2. Create your working branch (git checkout -b [choose-a-name])
 3. Commit your changes (git commit -am 'what this commit will fix/add')
 4. Push to the branch (git push origin feature/[feature-name])
