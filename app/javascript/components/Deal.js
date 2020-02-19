@@ -27,14 +27,30 @@ class Deal extends React.Component {
   render() {
     const { deal } = this.state;
     return (
-      <div>
-        <img src={deal.image_url} alt="" />
-        <h1>{deal.deal_name}</h1>
-        <p>{deal.date}</p>
-        <p>{deal.description}</p>
-        <p>{deal.price}</p>
-        <p>{deal.location}</p>
-        <Link to={`${deal.id}/form`}>Book now</Link>
+      <div className="outerContainer">
+        <div className="menuContainer">
+          <Link to="/">Home</Link>
+          <Link to={`${deal.id}`}>Deal</Link>
+        </div>
+        <img className="bigImg" src={deal.image_url} alt="" />
+        <div className="description">
+          <h1>{deal.deal_name}</h1>
+          <p>
+            Date:
+            {deal.date}
+          </p>
+          <h3>Description</h3>
+          <p>{deal.description}</p>
+          <p>
+            Price:
+            {deal.price}
+          </p>
+          <p>
+            Location:
+            {deal.location}
+          </p>
+          <Link to={`${deal.id}/form`}>Book now</Link>
+        </div>
       </div>
     );
   }

@@ -38,6 +38,7 @@
 .outerContainer{
     display: flex;
     flex-direction: row;
+    background-color: #fff;
 }
 .outerDeals{
    h1 {
@@ -49,4 +50,30 @@
    width: 15%;
    border-right: 1px solid #999;
    height: 100vh;
+
+   a{
+
+        color: #000;
+        text-decoration: none;
+        padding: 15px;
+        background-color: #999;
+        display: flex;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: 600;
+
+   }
+}
+body {
+    background-image: url("https://i.ibb.co/c6j4b0z/white-airliner-wing-on-top-of-sea-clouds-2007401.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:0;
+}
+.bigImg {
+    height:500px;
+    padding: 5px;
+}
+.description{
+    padding: 5px;
 }
