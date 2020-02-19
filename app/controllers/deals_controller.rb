@@ -8,7 +8,7 @@ class DealsController < ApplicationController
     @deal = Deal.find(params[:id])
     render json: @deal
   end
-  
+
   def create
     @deal = Deal.create(deal_params)
     render json: @deal
