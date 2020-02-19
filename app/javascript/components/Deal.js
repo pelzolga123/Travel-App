@@ -28,8 +28,12 @@ class Deal extends React.Component {
     const { deal } = this.state;
     return (
       <div>
-        <p>{deal.id}</p>
+        <img src={deal.image_url} alt="" />
         <h1>{deal.deal_name}</h1>
+        <p>{deal.date}</p>
+        <p>{deal.description}</p>
+        <p>{deal.price}</p>
+        <p>{deal.location}</p>
         <Link to={`${deal.id}/form`}>Book now</Link>
       </div>
     );

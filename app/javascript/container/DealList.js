@@ -36,15 +36,23 @@ class DealList extends React.Component {
     }
     return (
       <div>
-        <h1>Deal List</h1>
-        <div>
-          {deals.map(deal => (
-            <div key={deal.id}>
-              <Link to={`/deals/${deal.id}`}>
-                {deal.deal_name}
-              </Link>
+        <div className="outerContainer">
+          <div className="menuContainer" />
+          <div className="outerDeals">
+            <h1>All Trips</h1>
+            <div className="dealsContainer">
+              {deals.map(deal => (
+                <div className="card" key={deal.id}>
+                  <img className="smallImg" src={deal.image_url} alt="" />
+                  <div className="container">
+                    <Link to={`/deals/${deal.id}`}>
+                      {deal.deal_name}
+                    </Link>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     );

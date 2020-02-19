@@ -4,6 +4,7 @@ import Deal from './components/Deal';
 import DealList from './container/DealList';
 import DealForm from './components/DealForm';
 
+
 const App = () => (
   <div>
     <Switch>
@@ -11,7 +12,7 @@ const App = () => (
         <DealList />
       </Route>
       <Route path="/deals/:id" exact component={Deal} />
-      <Route path="/deals/:id/from" exact component={DealForm} />
+      <Route path="/deals/:id/form" exact component={DealForm} />
     </Switch>
   </div>
 );

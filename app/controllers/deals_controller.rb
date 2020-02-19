@@ -14,8 +14,6 @@ class DealsController < ApplicationController
     render json: @deal
   end
 
-
-
   private
 
   def post_params
