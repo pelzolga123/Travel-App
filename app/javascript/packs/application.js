@@ -1,7 +1,13 @@
 import React from 'react';
 import { render } from 'react-dom';
-import App from '../components/App'
+import { BrowserRouter } from 'react-router-dom';
+import App from '../App';
 
 document.addEventListener('DOMContentLoaded', () => {
-  render(<App />, document.querySelector('#root'));
+  render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>,
+    document.querySelector('#root'),
+  );
 });
