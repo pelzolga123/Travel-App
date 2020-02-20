@@ -1,16 +1,18 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Gothic+A1:400,500,700&display=swap');
+
 .smallImg {
-    width: 350px;
-    height: 250px;
+    width: 250px;
+    height: 150px;
 }
 .dealsContainer{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 70%;
+    width: 95%;
     margin-right: auto;
     margin-left: auto;
     
@@ -41,13 +43,15 @@
     background-color: #fff;
 }
 .outerDeals{
+  margin-top: 20px;
+    
    h1 {
     text-align: center;
    }
 }
 
 .menuContainer{
-   width: 15%;
+   width: 25%;
    border-right: 1px solid #999;
    height: 100vh;
 
@@ -76,4 +80,32 @@ body {
 }
 .description{
     padding: 5px;
+}
+nav {
+    background: #9CCA0E;
+    padding: 15px 30px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    input {
+        padding: 5px 15px;
+        background-color: #fff;
+        color: #9CCA0E;
+        font-family: 'Dancing Script', cursive;
+        font-size: 25px;
+        font-weight: 700;
+        border: 1px solid white;
+        border-radius: 10px;
+    }
+}
+.notice, .alert {
+    display: none;
+} 
+.logo {
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    font-weight: 700;
 }
