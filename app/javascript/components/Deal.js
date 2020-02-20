@@ -30,26 +30,40 @@ class Deal extends React.Component {
       <div className="outerContainer">
         <div className="menuContainer">
           <Link to="/">Home</Link>
-          <Link to={`${deal.id}`}>Deal</Link>
         </div>
-        <img className="bigImg" src={deal.image_url} alt="" />
-        <div className="description">
-          <h1>{deal.deal_name}</h1>
-          <p>
-            Date:
-            {deal.date}
-          </p>
-          <h3>Description</h3>
-          <p>{deal.description}</p>
-          <p>
-            Price:
-            {deal.price}
-          </p>
-          <p>
-            Location:
-            {deal.location}
-          </p>
-          <Link to={`${deal.id}/form`}>Book now</Link>
+        <div className="outerDeal">
+          <div className="innerImg">
+            <img className="bigImg" src={deal.image_url} alt="" />
+            <p>{deal.description}</p>
+          </div>
+          <div className="description">
+            <h2>{deal.deal_name}</h2>
+            <div className="date">
+              <p>
+                Date:
+              </p>
+              <p>
+                {deal.date}
+              </p>
+            </div>
+            <div className="price">
+              <p>
+                Price:
+              </p>
+              <p>
+                {deal.price}
+              </p>
+            </div>
+            <div className="location">
+              <p>
+                Location:
+              </p>
+              <p>
+                {deal.location}
+              </p>
+            </div>
+            <Link to={`${deal.id}/form`}>Book now</Link>
+          </div>
         </div>
       </div>
     );

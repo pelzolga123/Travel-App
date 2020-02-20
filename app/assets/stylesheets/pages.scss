@@ -44,10 +44,16 @@
 }
 .outerDeals{
   margin-top: 20px;
-    
+
    h1 {
     text-align: center;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 700;
    }
+}
+.outerDeal {
+  display: flex;
+  width: 95%;
 }
 
 .menuContainer{
@@ -56,16 +62,17 @@
    height: 100vh;
 
    a{
-
-        color: #000;
+        font-family: 'Gothic A1', sans-serif;
+        color: #333;
         text-decoration: none;
-        padding: 15px;
-        background-color: #999;
+        padding: 20px 25px;
         display: flex;
-        padding: 20px;
-        font-size: 20px;
+        font-size: 24px;
         font-weight: 600;
-
+   }
+   a:hover {
+      color: #fff;
+      background-color: #9CCA0E;
    }
 }
 body {
@@ -73,13 +80,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     margin:0;
-}
-.bigImg {
-    height:500px;
-    padding: 5px;
-}
-.description{
-    padding: 5px;
 }
 nav {
     background: #9CCA0E;
@@ -108,4 +108,55 @@ nav {
     font-family: 'Dancing Script', cursive;
     font-size: 25px;
     font-weight: 700;
+}
+.innerImg {
+    width: 65%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      font-size: 22px;
+      font-family: 'Gothic A1', sans-serif;
+    }
+}
+.description {
+    display:flex;
+    flex-direction: column;
+    padding: 0 15px;
+
+    h2{
+        font-family: 'Gothic A1', sans-serif;
+    }
+    a {
+        background-color: #9CCA0E;
+        color: #fff;
+        font-family: 'Gothic A1', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        border: 1px solid #9CCA0E;
+        border-radius: 10px;
+        text-decoration: none;
+        padding: 10px;
+        width: 140px;
+        text-align: center;
+        margin-top: 25px;
+        align-self: center;
+    }
+}
+
+.date, .price, .location{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-family: 'Gothic A1', sans-serif;
+    align-items: center;
+
+    p {
+    margin: 0;
+    padding: 10px;
+    }
+}
+.date, .location {
+    background-color: #c8c8c8;
 }
