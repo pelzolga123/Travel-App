@@ -8,5 +8,4 @@ class DealsController < ApplicationController
     @deal = Deal.find(params[:id])
     render json: @deal
   end
-
 end
