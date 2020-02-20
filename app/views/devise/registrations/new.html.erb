@@ -1,3 +1,8 @@
+<nav>
+<h3 class="logo">Travel App</h3>
+<%= link_to('Sign Up', new_user_registration_path)  %>  
+</nav>
+<div class="loginForm">
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -25,5 +30,5 @@
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
+</div>
 
-<%= render "devise/shared/links" %>
