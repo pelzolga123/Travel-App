@@ -51,6 +51,9 @@
     font-weight: 700;
    }
 }
+.forms {
+    width: 75%;
+}
 .outerDeal {
   display: flex;
   width: 95%;
@@ -220,5 +223,42 @@ nav {
 .remember {
     input {
         width: 5%;
+    }
+}
+.submitForm {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+
+    button {
+        background-color: #9CCA0E;
+        color: #fff;
+        font-family: 'Gothic A1', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        border: 1px solid #9CCA0E;
+        border-radius: 10px;
+        padding: 10px;
+        width: 50%;
+        text-align: center;
+        margin-bottom: 20px;
+        align-self: center;
+    }
+
+    input { 
+        width: 100%;
+        padding: 10px;
+        font-family: 'Gothic A1', sans-serif;
+        border: 2px solid #9CCA0E;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+    label {
+        font-family: 'Gothic A1', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
     }
 }
