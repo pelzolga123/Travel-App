@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class Deal extends React.Component {
   constructor(props) {
@@ -14,12 +15,12 @@ class Deal extends React.Component {
     fetch(`/deals/${id}`)
       .then(response => response.json())
       .then(deal => {
-        console.log(deal);
         this.setState({
           deal,
         });
       })
       .catch(error => {
+        // eslint-disable-next-line no-console
         console.log(error);
       });
   }
@@ -69,5 +70,9 @@ class Deal extends React.Component {
     );
   }
 }
+Deal.propTypes = {
+  match: PropTypes.number.isRequired,
+};
+
 
 export default Deal;
