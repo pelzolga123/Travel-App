@@ -262,3 +262,20 @@ nav {
         font-weight: 700;
     }
 }
+
+.lifepage {
+    background-color: #1B4438;
+    display: flex;
+    align-items: center;
+    width: 30%;
+
+    .styleImg {
+      width: 100%;
+    }
+
+    .quoteImg {
+      padding: 15px;
+      width: 90%;
+    }
+
+}
