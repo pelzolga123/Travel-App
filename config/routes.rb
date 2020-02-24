@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :deals, only: [:index, :create, :show ]
 
+  get '/lifestyle', to: 'pages#index';  
   get 'deals/:id', to: 'pages#index';
   get 'deals/:id/form', to: 'pages#index';
   root 'pages#index'

@@ -31,6 +31,7 @@ class Deal extends React.Component {
       <div className="outerContainer">
         <div className="menuContainer">
           <Link to="/">Home</Link>
+          <Link to="/lifestyle">Lifestyle</Link>
         </div>
         <div className="outerDeal">
           <div className="innerImg">

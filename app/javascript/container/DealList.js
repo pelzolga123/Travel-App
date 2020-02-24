@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import fetchDeals from '../actions';
 
 class DealList extends React.Component {
   constructor(props) {
@@ -27,6 +30,9 @@ class DealList extends React.Component {
 
   render() {
     const { deals, isLoaded } = this.state;
+    const { fetchDeals } = this.props;
+    const data = fetchDeals(deals);
+    console.log(data.deals);
 
     if (!isLoaded) {
       return (
@@ -38,7 +44,10 @@ class DealList extends React.Component {
     return (
       <div>
         <div className="outerContainer">
-          <div className="menuContainer" />
+          <div className="menuContainer" >
+            <Link to="/">Home</Link>
+            <Link to="/lifestyle">Lifestyle</Link>
+          </div>
           <div className="outerDeals">
             <h1>All Trips</h1>
             <div className="dealsContainer">
@@ -60,4 +69,12 @@ class DealList extends React.Component {
   }
 }
 
-export default DealList;
+const mapDispatchToProps = dispatch => ({
+  fetchDeals: deals => dispatch(fetchDeals(deals)),
+});
+
+FormData.propTypes = {
+  fetchDeals: PropTypes.func.isRequired,
+};
+
+export default connect(null, mapDispatchToProps)(DealList);
