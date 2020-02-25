@@ -79,11 +79,13 @@
    }
 }
 body {
-    background-image: url("https://i.ibb.co/c6j4b0z/white-airliner-wing-on-top-of-sea-clouds-2007401.jpg");
+    background-image: url("https://i.ibb.co/VxXCJ5J/airplane-wing-towards-clouds-731217.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     margin:0;
+    height: 100%
 }
+
 nav {
     background: #9CCA0E;
     padding: 15px 30px;
@@ -102,6 +104,10 @@ nav {
         border: 1px solid white;
         border-radius: 10px;
         text-decoration: none;
+    }
+    a:hover {
+        color: #9CCA0E;
+        background-color: #fff;
     }
 }
 .notice, .alert {
@@ -278,4 +284,17 @@ nav {
       width: 90%;
     }
 
+}
+
+@media only screen and (max-width: 425px) {
+ .dealsContainer {    
+   width: 90%;
+    
+   .card{
+      .smallImg {
+        width: 350px;
+        height: 250px;
+      }
+    }
+  }   
 }
