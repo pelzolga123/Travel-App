@@ -102,7 +102,7 @@ const LifeStyle = () => (
       </div>
       <div className="outerDeals">
         <h1>Lifestyle</h1>
-        <div className="dealsContainer">
+        <div className="dealsContainer page">
           {(img).map(item => (
             <div className="card lifepage" key={item.id}>
               <img className={item.class} src={item.src} alt="" />

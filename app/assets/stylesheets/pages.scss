@@ -44,6 +44,7 @@
 }
 .outerDeals{
   margin-top: 20px;
+  border-left: 1px solid #999;
 
    h1 {
     text-align: center;
@@ -61,7 +62,6 @@
 
 .menuContainer{
    width: 25%;
-   border-right: 1px solid #999;
    height: 100vh;
 
    a{
@@ -72,11 +72,19 @@
         display: flex;
         font-size: 24px;
         font-weight: 600;
+        cursor: pointer;
    }
    a:hover {
-      color: #fff;
-      background-color: #9CCA0E;
-   }
+    color: #fff;
+    background-color: #9CCA0E;
+ }
+}
+.button_to {
+    cursor: pointer;
+    input:hover {
+        color: #fff;
+        background-color: #9CCA0E;
+     }
 }
 body {
     background-image: url("https://i.ibb.co/VxXCJ5J/airplane-wing-towards-clouds-731217.jpg");
@@ -273,6 +281,7 @@ nav {
     background-color: #1B4438;
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 30%;
 
     .styleImg {
@@ -286,15 +295,55 @@ nav {
 
 }
 
-@media only screen and (max-width: 425px) {
+@media (max-width: 700px) {
  .dealsContainer {    
    width: 90%;
-    
+   justify-content: center;
+    .lifepage {
+        width: 48%;
+    }
    .card{
       .smallImg {
         width: 350px;
         height: 250px;
       }
+
+    .quoteImg {
+        padding: 15px;
+        width: 70%;
+      }
+
     }
-  }   
+  }
+  .menuContainer{
+    width: 15%;
+    a {
+        font-size: 16px; 
+        padding: 20px 10px;
+    }
+}
+.innerImg {
+    width:70%;
+    align-self: center;
+    p {
+      font-size: 16px; 
+    }
+    .bigImg {
+      width: 100%;
+    }
+}
+  .page {
+    justify-content: space-between;
+}   
+  .outerDeal{
+    flex-direction: column-reverse;
+    width: 85%;
+    border-left: 1px solid #999;
+    justify-content: flex-end;
+
+  }
+  .description{
+    width: 70%;
+    align-self: center;
+  }
 }
