@@ -44,6 +44,16 @@ $ npm install
 $ bundle install
 ```
 
+> Next, create and migrate the database:
+
+```sh
+$ rails db:create
+```
+
+```sh
+$ rails db:migrate
+```
+
 > Start 
 
 ```sh
