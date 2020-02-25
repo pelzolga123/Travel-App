@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import getDeals from '../actions/dealsAction';
 
 class DealList extends React.Component {
@@ -66,6 +67,10 @@ class DealList extends React.Component {
 const mapDispatchToProps = dispatch => ({
   getDeals: deals => dispatch(getDeals(deals)),
 });
+
+DealList.propTypes = {
+  getDeals: PropTypes.func.isRequired,
+};
 
 
 export default connect(null, mapDispatchToProps)(DealList);
