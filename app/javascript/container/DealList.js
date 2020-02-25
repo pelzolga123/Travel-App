@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import fetchDeals from '../actions';
+import getDeals from '../actions/dealsAction';
 
 class DealList extends React.Component {
   constructor(props) {
@@ -21,18 +20,13 @@ class DealList extends React.Component {
           isLoaded: true,
           deals: json,
         });
-      })
-      .catch(error => {
-        // eslint-disable-next-line no-console
-        console.log(error);
       });
   }
 
   render() {
     const { deals, isLoaded } = this.state;
-    const { fetchDeals } = this.props;
-    const data = fetchDeals(deals);
-    console.log(data.deals);
+    const { getDeals } = this.props;
+    getDeals(deals);
 
     if (!isLoaded) {
       return (
@@ -44,7 +38,7 @@ class DealList extends React.Component {
     return (
       <div>
         <div className="outerContainer">
-          <div className="menuContainer" >
+          <div className="menuContainer">
             <Link to="/">Home</Link>
             <Link to="/lifestyle">Lifestyle</Link>
           </div>
@@ -70,11 +64,8 @@ class DealList extends React.Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  fetchDeals: deals => dispatch(fetchDeals(deals)),
+  getDeals: deals => dispatch(getDeals(deals)),
 });
 
-FormData.propTypes = {
-  fetchDeals: PropTypes.func.isRequired,
-};
 
 export default connect(null, mapDispatchToProps)(DealList);

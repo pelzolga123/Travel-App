@@ -1,32 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import getDeals from '../actions/dealsAction';
 
+const mapStateToProps = state => ({
+  deals: state.deals,
+});
+
+const findDeal = (id, data) => {
+  let tmp;
+  for (let i = 0; i < data.length; i += 1) {
+    if (data[i].id.toString() === id) {
+      tmp = data[i];
+    }
+  }
+  return tmp;
+};
 class Deal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      deal: {},
     };
   }
 
-  componentDidMount() {
-    const { match: { params: { id } } } = this.props;
-    fetch(`/deals/${id}`)
-      .then(response => response.json())
-      .then(deal => {
-        this.setState({
-          deal,
-        });
-      })
-      .catch(error => {
-        // eslint-disable-next-line no-console
-        console.log(error);
-      });
-  }
-
   render() {
-    const { deal } = this.state;
+    const { match: { params: { id } } } = this.props;
+    const { deals } = this.props;
+    const deal = findDeal(id, deals);
+
     return (
       <div className="outerContainer">
         <div className="menuContainer">
@@ -72,8 +74,18 @@ class Deal extends React.Component {
   }
 }
 Deal.propTypes = {
-  match: PropTypes.number.isRequired,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+  deals: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
+const mapDispatchToProps = dispatch => ({
+  getDeals: deals => dispatch(getDeals(deals)),
+});
 
-export default Deal;
+export default connect(mapStateToProps, mapDispatchToProps)(Deal);

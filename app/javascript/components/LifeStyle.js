@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const img = [
-
   {
     src: 'https://i.ibb.co/WWwKgNr/14-2x.png',
     class: 'styleImg',
@@ -23,7 +22,6 @@ const img = [
     src: 'https://i.ibb.co/74h0phn/12-2x.png',
     class: 'styleImg',
   },
-
   {
     src: 'https://i.ibb.co/MPPs6DW/quote7-2x.png',
     class: 'quoteImg',
@@ -48,7 +46,6 @@ const img = [
     src: 'https://i.ibb.co/WBpGPHN/6-2x.png',
     class: 'styleImg',
   },
-
   {
     src: 'https://i.ibb.co/dQ3GnhF/quote4-2x.png',
     class: 'quoteImg',
@@ -73,7 +70,6 @@ const img = [
     src: 'https://i.ibb.co/SmDBzQC/7-2x.png',
     class: 'styleImg',
   },
-
   {
     src: 'https://i.ibb.co/kSVDMrK/quote1-2x.png',
     class: 'quoteImg',
