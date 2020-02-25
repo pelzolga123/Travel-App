@@ -304,8 +304,8 @@ nav {
     }
    .card{
       .smallImg {
-        width: 350px;
-        height: 250px;
+        width: 300px;
+        height: 200px;
       }
 
     .quoteImg {
@@ -316,7 +316,7 @@ nav {
     }
   }
   .menuContainer{
-    width: 15%;
+    width: 25%;
     a {
         font-size: 16px; 
         padding: 20px 10px;
@@ -345,5 +345,14 @@ nav {
   .description{
     width: 70%;
     align-self: center;
+  }
+  .loginForm {
+      width: 80%;
+      form {
+          width: 70%;
+          input{
+              width: 90%;
+          }
+      }
   }
 }
