@@ -1,3 +1,358 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Gothic+A1:400,500,700&display=swap');
+
+.smallImg {
+    width: 250px;
+    height: 150px;
+}
+.dealsContainer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    
+    a {
+        text-decoration: none;
+        font-size:18px;
+        font-weight:600;
+        color: #000;
+    }
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-top: 30px;
+}
+  
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+  
+.container {
+    padding: 4px 16px;
+}
+
+.outerContainer{
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+}
+.outerDeals{
+  margin-top: 20px;
+  border-left: 1px solid #999;
+
+   h1 {
+    text-align: center;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 700;
+   }
+}
+.forms {
+    width: 75%;
+}
+.outerDeal {
+  display: flex;
+  width: 95%;
+}
+
+.menuContainer{
+   width: 25%;
+   height: 100vh;
+
+   a{
+        font-family: 'Gothic A1', sans-serif;
+        color: #333;
+        text-decoration: none;
+        padding: 20px 25px;
+        display: flex;
+        font-size: 24px;
+        font-weight: 600;
+        cursor: pointer;
+   }
+   a:hover {
+    color: #fff;
+    background-color: #9CCA0E;
+ }
+}
+.button_to {
+    cursor: pointer;
+    input:hover {
+        color: #fff;
+        background-color: #9CCA0E;
+     }
+}
+body {
+    background-image: url("https://i.ibb.co/VxXCJ5J/airplane-wing-towards-clouds-731217.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:0;
+    height: 100%
+}
+
+nav {
+    background: #9CCA0E;
+    padding: 15px 30px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    input, a {
+        padding: 5px 15px;
+        background-color: #fff;
+        color: #9CCA0E;
+        font-family: 'Dancing Script', cursive;
+        font-size: 25px;
+        font-weight: 700;
+        border: 1px solid white;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #9CCA0E;
+        background-color: #fff;
+    }
+}
+.notice, .alert {
+    display: none;
+} 
+.logo {
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    font-weight: 700;
+}
+.innerImg {
+    width: 65%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      font-size: 22px;
+      font-family: 'Gothic A1', sans-serif;
+    }
+}
+.description {
+    display:flex;
+    flex-direction: column;
+    padding: 0 15px;
+
+    h2{
+        font-family: 'Gothic A1', sans-serif;
+    }
+    a {
+        background-color: #9CCA0E;
+        color: #fff;
+        font-family: 'Gothic A1', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        border: 1px solid #9CCA0E;
+        border-radius: 10px;
+        text-decoration: none;
+        padding: 10px;
+        width: 140px;
+        text-align: center;
+        margin-top: 25px;
+        align-self: center;
+    }
+}
+
+.date, .price, .location{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-family: 'Gothic A1', sans-serif;
+    align-items: center;
+
+    p {
+    margin: 0;
+    padding: 10px;
+    }
+}
+.date, .location {
+    background-color: #c8c8c8;
+}
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    width: 50%;
+    margin-top: 10%;
+    font-family: 'Gothic A1', sans-serif;
+    border: 2px solid #9CCA0E;
+    border-radius: 10px;
+    opacity: 0.9;
+
+
+    h2 {
+        text-align: center;
+    }
+    form {
+        margin-right: auto;
+        margin-left: auto;
+        width: 80%;
+    }
+}
+
+.field {
+    input { 
+        width: 100%;
+        padding: 10px;
+        font-family: 'Gothic A1', sans-serif;
+        border: 2px solid #9CCA0E;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+    label {
+        font-family: 'Gothic A1', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+.actions {
+    text-align: center;
+    input {
+        background-color: #9CCA0E;
+        color: #fff;
+        font-family: 'Gothic A1', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        border: 1px solid #9CCA0E;
+        border-radius: 10px;
+        padding: 10px;
+        width: 140px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+.remember {
+    input {
+        width: 5%;
+    }
+}
+.submitForm {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+
+    button {
+        background-color: #9CCA0E;
+        color: #fff;
+        font-family: 'Gothic A1', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        border: 1px solid #9CCA0E;
+        border-radius: 10px;
+        padding: 10px;
+        width: 50%;
+        text-align: center;
+        margin-bottom: 20px;
+        align-self: center;
+    }
+
+    input { 
+        width: 100%;
+        padding: 10px;
+        font-family: 'Gothic A1', sans-serif;
+        border: 2px solid #9CCA0E;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+    label {
+        font-family: 'Gothic A1', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+.lifepage {
+    background-color: #1B4438;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+
+    .styleImg {
+      width: 100%;
+    }
+
+    .quoteImg {
+      padding: 15px;
+      width: 90%;
+    }
+
+}
+
+@media (max-width: 700px) {
+ .dealsContainer {    
+   width: 90%;
+   justify-content: center;
+    .lifepage {
+        width: 48%;
+    }
+   .card{
+      .smallImg {
+        width: 300px;
+        height: 200px;
+      }
+
+    .quoteImg {
+        padding: 15px;
+        width: 70%;
+      }
+
+    }
+  }
+  .menuContainer{
+    width: 25%;
+    a {
+        font-size: 16px; 
+        padding: 20px 10px;
+    }
+}
+.innerImg {
+    width:70%;
+    align-self: center;
+    p {
+      font-size: 16px; 
+    }
+    .bigImg {
+      width: 100%;
+    }
+}
+  .page {
+    justify-content: space-between;
+}   
+  .outerDeal{
+    flex-direction: column-reverse;
+    width: 85%;
+    border-left: 1px solid #999;
+    justify-content: flex-end;
+
+  }
+  .description{
+    width: 70%;
+    align-self: center;
+  }
+  .loginForm {
+      width: 80%;
+      form {
+          width: 70%;
+          input{
+              width: 90%;
+          }
+      }
+  }
+}

@@ -1,1 +1,15 @@
-<%= javascript_pack_tag 'hello_react' %> 
+
+<% if user_signed_in? %>
+  <nav>    
+    <h3 class="logo">Travel App</h3>
+    <%= button_to('Logout', destroy_user_session_path, method: :delete) %>          
+  </nav>  
+  <div id="root"></div>
+<% else %>
+  <nav>
+    <%= link_to('Login', new_user_session_path)  %> |
+    <%= link_to('Sign Up', new_user_registration_path)  %>  
+  </nav>
+<% end %>
+ 
+

@@ -1,0 +1,9 @@
+example_id                      | status | run_time        |
+------------------------------- | ------ | --------------- |
+./spec/models/deal_spec.rb[1:1] | passed | 0.0081 seconds  |
+./spec/models/deal_spec.rb[1:2] | passed | 0.01281 seconds |
+./spec/models/deal_spec.rb[1:3] | passed | 0.16939 seconds |
+./spec/models/deal_spec.rb[1:4] | passed | 0.00858 seconds |
+./spec/models/user_spec.rb[1:1] | passed | 0.25893 seconds |
+./spec/models/user_spec.rb[1:2] | passed | 0.03231 seconds |
+./spec/models/user_spec.rb[1:3] | passed | 0.03342 seconds |
