@@ -15,6 +15,12 @@ With the Travel App the following functions can be achieved:
 * Ruby on Rails 
 
 
+### Future features
+* Users can send submission form to book a trip.
+* Users have profile page.
+* All booked trips are displayed on profile page.
+
+
 ## Live Demo
 
 Here is a link to the [demo page](https://fast-harbor-32531.herokuapp.com/)
@@ -61,6 +67,13 @@ $ rails s
 ```
 
 > If it doesn't open automatically, open `http://localhost:3000` using your browser.
+
+### Testing project
+* run tests
+
+```sh
+rspec
+```
 
 ## Authors
 
