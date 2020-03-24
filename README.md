@@ -1,6 +1,10 @@
 
 <h1 align="center">Travel App👋</h1>
 
+<img src="https://i.ibb.co/JmtKGrW/travel-project.png" alt="travel-project" border="0">
+
+## About the project
+
 With the Travel App the following functions can be achieved:
 
 - Sign up, sign out, log in 
