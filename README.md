@@ -8,7 +8,7 @@
 With the Travel App the following functions can be achieved:
 
 - Sign up, sign out, log in 
-- Add new deals using admin panel 
+- Add new deals using the admin panel 
 - Open each deal to see details
 
 ## Built With
@@ -21,8 +21,8 @@ With the Travel App the following functions can be achieved:
 
 ### Future features
 * Users can send submission form to book a trip.
-* Users have profile page.
-* All booked trips are displayed on profile page.
+* Users have a profile page.
+* All booked trips are displayed on a profile page.
 
 
 ## Live Demo
